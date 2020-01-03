@@ -83,6 +83,18 @@ export const faq = {
 			maxAmount: '$3,950',
 			col: false,
 			colAmount: '$6,000'
+		},
+		{
+			programName: 'User Experience Bootcamp',
+			maxAmount: '$9,950',
+			col: false,
+			colAmount: '$6,000'
+		},
+		{
+			programName: 'User Experience After-Hours',
+			maxAmount: '$3,950',
+			col: false,
+			colAmount: '$6,000'
 		}
 	]
 };
@@ -103,7 +115,7 @@ export const headline = 'Learn to Code at Burlington Code Academy'; // update he
 
 export const leadContent = {
 	header: 'Your last step on the path toward changing your career',
-	paragraph: `${schoolName} offers a Web Development Bootcamp and a JavaScript After Hours program to provide students a foundation for a career in software development. ${schoolName} partners with Skills Fund to offer tuition${faq.costOfLiving
+	paragraph: `${schoolName} offers a variety of programs to provide students a foundation for a career in software development and UX/UI design. ${schoolName} partners with Skills Fund to offer tuition${faq.costOfLiving
 		? ' and cost of living'
 		: ''} financing so more students like you can access their program.`
 };
@@ -112,7 +124,8 @@ export const threeStepCardText = {
 	step1: '',
 	step2: {
 		header: 'select your program',
-		text: 'Choose between the Web Development Bootcamp and JavaScript After Hours programs.'
+		text:
+			'Choose between the Web Development Bootcamp, JavaScript After Hours, User Experience Bootcamp, and User Experience After-Hours programs.'
 	},
 	step3: `You'll be on your way to an exciting career in tech as part of ${schoolName}'s powerful network.`
 };
@@ -256,12 +269,114 @@ export const programLoanInfo = [
 				}
 			}
 		]
+	},
+	{
+		name: 'User Experience Bootcamp',
+		url: 'https://my.skills.fund/application?lenderCode=SKBURUEB19',
+		loanInfo: {
+			// match loanInfo in first metro below
+			maxLoanAmt: 9950,
+			loanTerm36: true,
+			loanTerm60: true,
+			'0': {
+				k: 5,
+				apr36: 11.67,
+				apr60: 12.99
+			},
+			'1': null
+		},
+		defaultLoanType: '0', // leave at 0 for interest-only, set to 1 for immediate repayment
+		showMetros: false,
+		showLoanTypes: false,
+		locations: [ 'Metro 1', 'Metro 2' ],
+		metros: [
+			{
+				location: 'Metro 1',
+				loanInfo: {
+					// match loanInfo to Program 2 loanInfo above
+					maxLoanAmt: 9950,
+					loanTerm36: true,
+					loanTerm60: true,
+					'0': {
+						k: 5,
+						apr36: 11.67,
+						apr60: 12.99
+					},
+					'1': null
+				}
+			},
+			{
+				location: 'Metro 2',
+				loanInfo: {
+					maxLoanAmt: 15545,
+					loanTerm36: true,
+					loanTerm60: true,
+					'0': {
+						k: 5,
+						apr36: 11.16,
+						apr60: 12.51
+					},
+					'1': null
+				}
+			}
+		]
+	},
+	{
+		name: 'User Experience After-Hours',
+		url: 'https://my.skills.fund/application?lenderCode=SKBURUEAH19',
+		loanInfo: {
+			// match loanInfo in first metro below
+			maxLoanAmt: 3950,
+			loanTerm36: true,
+			loanTerm60: true,
+			'0': {
+				k: 4,
+				apr36: 11.67,
+				apr60: 12.99
+			},
+			'1': null
+		},
+		defaultLoanType: '0', // leave at 0 for interest-only, set to 1 for immediate repayment
+		showMetros: false,
+		showLoanTypes: false,
+		locations: [ 'Metro 1', 'Metro 2' ],
+		metros: [
+			{
+				location: 'Metro 1',
+				loanInfo: {
+					// match loanInfo to Program 2 loanInfo above
+					maxLoanAmt: 3950,
+					loanTerm36: true,
+					loanTerm60: true,
+					'0': {
+						k: 4,
+						apr36: 11.67,
+						apr60: 12.99
+					},
+					'1': null
+				}
+			},
+			{
+				location: 'Metro 2',
+				loanInfo: {
+					maxLoanAmt: 15545,
+					loanTerm36: true,
+					loanTerm60: true,
+					'0': {
+						k: 5,
+						apr36: 11.16,
+						apr60: 12.51
+					},
+					'1': null
+				}
+			}
+		]
 	}
 ];
 
 // ***** BEGIN LOAN CALC TEXT INFO *****
 export const programMaxText =
-	"Choose the loan amount that works best for you. Borrow up to $9,950 for Burlington Code Academy's Web Development Bootcamp tuition, or up to $3,950 for JavaScript After Hours tuition.";
+	"Choose the loan amount that works best for you. Borrow up to $9,950 for Burlington Code Academy's Web Development Bootcamp or User Experience Bootcamp tuition, or up to $3,950 for JavaScript After-Hours or User Experience After-Hours tuition.";
 
 export const paymentTable = {
 	headers: [ 'Program', 'Tuition', 'Cost of Living', 'Max Total' ],
